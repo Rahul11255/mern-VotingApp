@@ -172,9 +172,50 @@ export const statueOfRamji = [
     "Stone Significance: Krishna Shila is chosen for its durability and workability. This 2.5 billion-year-old stone can withstand harsh weather and other environmental factors, making it suitable for intricate carvings."
   ]
 
+export const rajivKumar = [
+  "Sh. Rajiv Kumar, Election Commissioner in ECI since 1st September 2020, took charge as the 25th Chief Election Commissioner on 15th May 2022. Prior to assuming charge in the Election Commission, Sh. Rajiv Kumar had been Chairman, Public Enterprises Selection Board during April-August 2020; Finance Secretary of India from July 2019 to Feb 2020 ; Secretary, Financial Services from September 2017 to July 2019 and Establishment Officer from March 2015 to June 2017. Sh. Rajiv Kumar, an officer of the Indian Administrative Service of Bihar/Jharkhand cadre 1984 batch, superannuated in February 2020.",
+  "Born on 19th February 1960 and acquiring academic degrees of B.SC, LL.B, PGDM and MA in Public Policy and Sustainability, Shri Rajiv Kumar now have with him vast experience of more than 40 years, having worked in various Ministries at the Centre and State across Social Sector, Environment & Forests, Human Resources, Finance and Banking sector.",
+  "Soon after assuming charge as Chief Election Commissioner, Shri Kumar successfully led the conduct of 16th Presidential & Vice-Presidential Elections in 2022. During the last one and half years, Legislative Assembly Elections to 11 states including Gujarat, Himachal Pradesh, Meghalaya, Nagaland, Tripura, Karnataka, Mizoram, Rajasthan, Telangana, Madhya Pradesh and Chhattisgarh were held in over 3 lakh polling stations. Meticulous planning and exhaustive reviews by the Commission helped in ensuring largely violence-free, fair, accessible and inclusive elections in these states. Hitting hard to contain abuse of money power has been a major thrust of CEC Shri Kumar. ECIs thrust on “inducement- free” elections led to strict vigil, extensive monitoring, coordination with neighbouring states and inter agency coordination resulting in seizures amounting to over Rs 3400 crores, almost 10-fold increase from previous elections in these 11 states. During his tenure as Election Commissioner,",
+  "The Election Commission of India (ECI), with Chief Election Commissioner Shri Rajiv Kumar at the helm, also led the 'Democracy Cohort on Election Integrity'. ECI has hosted three international conferences between October 2022 and March 2023 as part of its involvement in this initiative.",
+  "During his tenure as CEC, Shri Kumar successfully completed another daunting task of delimitation of Parliamentary & Assembly Constituencies of Assam. Through consensus, consultation, and active participation, Shri Kumar along with fellow Commissioners brought together various stakeholders with conflicting viewpoints and interests to the same table, fostering an inclusive, participative and representative approach towards redefining electoral boundaries.",
+  "Being committed to bring in transparency in the political finances space, the Commission initiated several measures to strengthen compliance, transparency and accountability in political funding and expenditure. A web portal to ensure timely financial disclosures by parties, making voters informed and aware of the financial affairs of the parties was launched by the Commission. Also, noticing certain instances of serious financial impropriety in cases of a few Registered Unrecognized Political Parties (RUPPs), ECI delisted 284 RUPPs and 253 other RUPPs were declared inactive.",
+  "Noticing rising concern regarding low voter turnout in urban areas, Shri Kumar has personally made efforts to address the issue of urban and youth apathy in the elections. His consistent recall of the issue and ways to address it, has brought it to the mainstream discussion.",
+  "Sh. Kumar has a keen commitment to bring transparency, check information arbitrage and protect the vulnerable sections of society through the use of technology applications and/or amendments in legislation or extant Policy regime, wherever required. Some initiatives in this direction include the passing of Banning of Unregulated Deposit Schemes Act, 2019 to provide much needed protection to poor depositors and deal with the menace of illicit deposit taking schemes; Amendment in Banking Regulation Act to strengthen Regulatory Powers of RBI over Multi State Cooperative Banks to avoid wrongdoings like in case of PMC Bank.",
+  "Shri Rajiv Kumar has been Director, Central Board of Reserve Bank of India, SBI, NABARD; Member Economic Intelligence Council (EIC); Member Financial Stability and Development Council (FSDC); Member Bank Board Bureau (BBB); Member Financial Sector Regulatory Appointments Search Committee (FSRASC), Member Civil services Board among many other such Boards and Committees.",
+  "Sh. Kumar has also been Establishment Officer, Department of Personnel and Training from 2014-17 and prior to that Joint Secretary, Department of Expenditure. He spearheaded Transparent Personnel Management to encourage integrity and probity in senior-level appointments in GoI. He was also a member of the Task force for restructuring of NITI Aayog. On the basis of the report, the present structure of NITI Aayog was approved.",
+  "During 2001-2007, as Director and Joint Secretary in the Ministry of Tribal Affairs, Sh. Kumar drafted the Scheduled Tribes (Reorganisation of Forests Rights) Bill, 2005. In the field, he has worked as Director, Primary Education, Bihar; Director Industries, Bihar; Deputy Commissioner, District Development Commissioner, ADM (Law & Order) and SDM."
+]
 
- 
-    
+export const shrigyaneshkumar = [
+
+"Shri Gyanesh Kumar took charge as Election Commissioner in Election Commission of India on the 15th of March, 2024. He is a 1988 Batch Kerala Cadre Officer of the lndian Administrative Service. After completing his B.Tech in Civil Engineering from llT Kanpur, he has studied Business Finance from lCFAl, lndia and Environmental Economics from HllD, Harvard University, USA." ,
+
+"He has worked in the Government of Kerala as Assistant Collector of Ernakulam; Sub Collector of Adoor; MD of Kerala State Development Corporation for SC/ST; Municipal Commissioner of Corporation of Cochin; MD of Kerala State Cooperative Bank; Director of lndustries and Commerce; District Collector of Ernakulam; Secretary of Goshree lslands Development Authority; MD of Trivandrum Airport Development Society; Project Director of Kerala State Transport Project and Resident Commissioner of Kerala House in New Delhi." ,
+
+"As Secretary to the Government of Kerala, he has handled diverse departments such as Finance Resources; Fast Track Projects; Public Works Department; Modernising Government Program; and Food, Civil Supplies & Consumer Affairs." ,
+
+"ln the Government of India, he has rich experience of working as Joint Secretary in the Ministry of Defence; Joint Secretary & Additional Secretary in the Ministry of Home Affairs; Secretary in the Ministry of Parliamentary Affairs; and Secretary in the Ministry of Cooperation. He superannuated on 31st of January, 2024."
+
+]
+
+export const drSukhbirsingh = [
+"Dr. Sukhbir Singh Sandhu joined as Election Commissioner in Election Commission of India on 15th March, 2024. He is 1988 batch IAS officer from Uttarakhand Cadre. He served as Chief Secretary, Government of Uttarakhand from July 2021 to January 2024. Before that, he served as Chairman, National Highways Authority of India (NHAI) for about 2 years. After Superannuating in January 2024, he briefly served as Secretary, Lokpal of India. He also served in Government of India as Additional Secretary, Higher Education, where he looked after IITs, IIMs, NITs, IIITs etc." ,
+
+"He served in various positions in the Government of Uttarakhand, Government of Uttar Pradesh and Government of Punjab. He worked in the several areas including Infrastructure development, Highways, PPP Projects, Urban Development, Power, New & Renewable Energy etc.",
+
+"He served as Principal Secretary to 4 CMs from 3 different political parties, for about eight years",
+
+"In NHAI, arbitration disputes worth Rs. 30,000 Cr were resolved by conciliation during his tenure, bringing great relief to the contractors and banks. NHAI was made one of the most digitised, drone monitored and portal governed organization.",
+
+"He is keen on simplifying the processes/procedures for effective delivery and likes to find solution to various challenges.",
+
+"He is a Medical Graduate (MBBS), has Master’s Degree in History and is also a Law Graduate.",
+
+"He has interest in trekking and mountaineering and had scaled Black Peak (22,000 feet) in Uttarkashi District, Uttarakhand.",
+
+"He delivered a talk on ‘De-stressing Indian Cities’ at Harvard Business School, Boston, U.S.A, on invitation. He also published papers on ‘Urban Reforms’ and ‘Municipal Management and Capacity Building’.",
+
+]
   
   
   

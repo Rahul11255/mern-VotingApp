@@ -68,7 +68,7 @@ const Candidate = () => {
     const token = localStorage.getItem("token");
     try {
       const deleteConfirmed = window.confirm(
-        "Are you sure you want to Delete note?"
+        "Are you sure you want to Delete the Candidate?"
       );
       if (deleteConfirmed) {
         await axios

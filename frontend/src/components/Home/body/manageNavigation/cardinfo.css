@@ -16,6 +16,30 @@
     width: 100%;
 }
 
+.member_data_container{
+    width: 100%;
+    display: flex;
+    padding: 35px 200px ;
+    background-color: rgb(208, 233, 224);
+    height: auto;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.member_data{
+    padding: 25px;
+    background-color: white;
+    border: 1px solid rgb(32, 187, 153);
+    /* border-right: 2px solid rgb(32, 187, 153); */
+}
+.member_data > p{
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+
+
+
 
 @media screen and (max-width: 450px) {
     .commision_member{
@@ -26,6 +50,20 @@
     }
 }
 
+@media screen and (max-width: 1100px) {
+ 
+    .member_data_container{
+        width: 100%;
+        display: flex;
+        padding: 25px 35px ;
+        background-color: rgb(208, 233, 224);
+        height: auto;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+}
+
 @media screen and (max-width: 750px) {
     .commision_member{
         margin-top: 60px;
@@ -33,4 +71,14 @@
     .image_gallery{
         padding: 0px 10px;
     }
+    .member_data_container{
+        width: 100%;
+        display: flex;
+        padding: 25px 15px ;
+        background-color: rgb(208, 233, 224);
+        height: auto;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
 }
