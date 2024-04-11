@@ -1,0 +1,36 @@
+
+
+.commision_member{
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+.commision_member img{
+    width: 100%;
+}
+
+.image_gallery{
+    padding: 0px 200px;
+}
+.grid_img{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 450px) {
+    .commision_member{
+        margin-top: 80px;
+    }
+    .image_gallery{
+        padding: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .commision_member{
+        margin-top: 60px;
+    }
+    .image_gallery{
+        padding: 0px 10px;
+    }
+}

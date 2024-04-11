@@ -1,0 +1,64 @@
+.dashoard_container{
+    width: 100%;
+   height: auto;
+   background-color: rgba(248, 245, 245, 0.418);
+} 
+
+.dsh_card{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 35px;
+    padding: 25px;
+    flex-wrap: wrap;
+}
+
+.ds_card_item{
+    flex: 1 0 220px;
+    height: 190px;
+    background-color: white;
+    border-radius:5px ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* color: white; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+.ds_card_item p:nth-child(2){
+    color: black;
+    font-size: 25px;
+
+}
+
+.ds_card_item p:nth-child(3){
+    color:rgb(107, 104, 104);
+    font-size: 18px;
+
+    font-weight: 400;
+    letter-spacing: 1.2px;
+}
+
+.userList{
+    padding: 25px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.ds_tc{
+    color: white !important;
+    font-size: 22px !important;
+    text-align: center !important;
+    
+
+}
+
+.ds_tc_data{
+    /* font-size:  !important; */
+    font-size: 18px !important;
+    text-align: center !important;
+
+
+}

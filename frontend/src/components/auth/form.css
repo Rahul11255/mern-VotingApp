@@ -1,0 +1,403 @@
+
+.error{
+  width: 350px;
+  height: 45px;
+  background-color: rgba(245, 8, 8, 0.288);
+  filter: blur(.5px);
+  color:red;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  align-items: center;
+  border-radius:10px;
+  margin-bottom: 10px;
+}
+
+.success{
+  width: 350px;
+  height: 45px;
+  background-color: rgba(66, 235, 44, 0.39);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:10px;
+  /* margin-bottom: 10px; */
+}
+
+/* MyForm.jsx */
+
+.body_container{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url('./signup-bg.jpg');
+  background-image: url('https://www.soutickets.in/assets/images/banner_home_img.jpg');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.singup_text{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   color: white;
+   letter-spacing: 1.5px;
+   font-weight: 400;
+   font-size: 25px;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.form_parent_container{
+  /* margin-top: 20px; */
+  width: 100%;
+  height:80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.myform_container{
+  background-color: rgba(75, 73, 73, 0.11);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+
+.myform_input {
+  display: flex;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 45%;
+}
+
+.myform_input input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  letter-spacing: .5px;
+  color: white;
+  height: 35px  ;
+}
+
+.myform_input input:focus{
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.671);
+  padding-left: 5px;
+}
+
+
+.select{
+  background-color: rgba(128, 128, 128, 0.158);
+  color: white;
+  height: 45px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 17px;
+}
+
+option{
+  color: black;
+  font-size: 15px;
+}
+::placeholder{
+  color:rgba(250, 247, 247, 0.87) ;
+}
+
+.radio_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.radio_container input{
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: transparent;
+}
+
+label{
+  color: rgb(245, 245, 245);
+}
+
+.gotohome{
+  display: flex;
+  justify-content: center;
+}
+
+.file{
+ background-color: rgba(126, 121, 121, 0.664);
+ border-radius:10px ;
+ cursor: pointer;
+ width: 75%;
+ 
+}
+.age_input{
+  width: 15%;
+}
+
+input[type="file"]::file-selector-button{
+  border-radius: 4px;
+  padding: 0 16px;
+  /* font-size: 10px; */
+  height: 35px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.822);
+  background-color: rgba(194, 187, 187, 0.671);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+
+
+/* CSS */
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background:rgb(32, 172, 32);
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+  .body_container{
+    padding-top: 10px;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    /* background-image: url('./signup-bg.jpg'); */
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content:none;
+    align-items:normal;
+  }
+
+  .singup_text{
+    display: flex;
+    width: 100%;
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+ }
+  
+  .myform_container{
+    margin-top: 0vh;
+    backdrop-filter: blur(1px) ;
+    height: auto;
+    width: 300px;
+    padding: 20px 30px;
+  }
+  
+  .error{
+    background-color: transparent;
+    font-size: 15px;
+  }
+  
+  .success{
+    background-color: transparent;
+    color: rgb(12, 201, 12);
+  }
+
+
+  
+  .myform_input {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  .myform_input input {
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    letter-spacing: .5px;
+    color: white;
+    height: 35px  ;
+  }
+
+  .file{
+    background-color: rgba(126, 121, 121, 0.664);
+    border-radius:10px ;
+    cursor: pointer;
+    width: 100%;
+    /* display: none ; */
+    height: 25px;
+    
+   }
+   .age_input{
+     margin-left: 20px;
+     width: 20%;
+     margin-right: -30px;
+   }
+
+   .button-86 {
+    all: unset;
+    width: 100px;
+    height: 18px;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-86::after {
+    width: 25px;
+    height: 25px;
+  }
+  
+   input[type="file"]::file-selector-button{
+    border-radius: 2px;
+    padding: 0 10px;
+    font-size: 15px;
+    height: 25px;
+    cursor: pointer;
+    transition: background-color 200ms;
+  }
+
+  .form_parent_container{
+    margin-top: -20px;
+    width: 100%;
+    height:80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .select{
+    background-color: rgba(128, 128, 128, 0.158);
+    color: white;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 17px;
+  }
+  
+  .gotohome{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .radio_container{
+    width: 25%;
+    margin-right: 45px;
+  }
+  
+  .radio_container input{
+    margin-left: 10px;
+    margin-right: 10px;
+  
+}
+
+} 

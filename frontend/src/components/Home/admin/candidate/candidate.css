@@ -1,0 +1,76 @@
+.candidate_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - 64px);
+  padding: 20px;
+}
+
+.data {
+  width: 100%;
+  margin-top: -150px;
+  box-sizing: border-box;
+}
+
+.candiate_input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.candiate_input::placeholder {
+  font-size: 16px;
+}
+.candiate_input:focus {
+  border: 2px solid darkcyan;
+}
+
+.candidate_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: lightcoral;
+}
+
+.candidate_table th,
+.candidate_table td {
+  border: 2px solid #065044;
+  padding: 8px;
+  text-align: center;
+}
+
+.candidate_table th,
+.candidate_table td:hover{
+  border: 2px solid #065044;
+  padding: 8px;
+  text-align: center;
+}
+
+
+.candidate_table th {
+  background-color: rgb(223, 216, 216);
+}
+
+.dialog_content {
+  background-image: url("../../../images/create-candidate.jpeg");
+  background-position: left center;
+  background-size: cover;
+}
+
+.candidate_form_container {
+  padding: 30px 50px;
+  color: rgb(216, 211, 211);
+}
+
+.dialog_title,
+.dialog_footer {
+  background-color: rgb(221, 218, 218);
+}

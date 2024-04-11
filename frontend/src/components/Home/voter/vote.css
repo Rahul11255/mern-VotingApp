@@ -1,0 +1,293 @@
+.votes_container{
+    width: 100%;
+    height: auto;
+}
+
+
+.votes_table{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.table_container_votec{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.table_th_Cell{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.tabel_bd_cell{
+    font-size: 25px;
+    text-align: center;
+}
+
+.candidate_logo,.default_logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+/*  asasf */
+
+.profile_voting_container {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.pitem {
+    flex: 0 0 35%;
+    /* padding: 20px 25px; */
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    
+}
+
+.vitem {
+    flex: 0 0 65%;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.voter_profile_card{
+    padding: 30px;
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    background-image: url("../../images/profile_card.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.profile_img{
+     height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.voter_profile_card img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+/* .voter_profile_card img:hover{
+    transform: scale(1.01);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+} */
+
+
+.profile_details{
+    margin-top: 20px;
+}
+
+
+.profile_details_ele{
+    color: white;
+    height: 32px;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    background-color: rgba(214, 205, 205, 0.473);
+    margin-bottom: 10px;    
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+}
+
+.span{
+    color: black;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.you_voted_img{
+    width: 100%;
+    height: 501px;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position:center;
+}
+
+
+@media screen and (max-width: 1050px) {
+  .pitem {
+    flex: 0 0 35%;
+    padding-bottom: 20px;
+}
+
+.vitem {
+    flex: 0 0 55%;
+}
+.profile_voting_container {
+    width: 100%;
+    gap: 40px;
+    padding-top: 20px;
+}
+.profile_voting_container{
+    padding-left: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+}
+
+@media screen and (max-width: 900px) {
+    .profile_voting_container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        padding-left: 50px;
+        margin-top: 10px;
+    }
+    .pitem {
+      flex: 0 0 35%;
+      padding-bottom: 20px;
+  }
+  
+  .vitem {
+      flex: 0 0 45%;
+  }
+  .profile_voting_container {
+      width: 100%;
+      gap: 40px;
+      padding-top: 20px;
+  }
+  
+  }
+  
+
+@media screen and (max-width: 750px) {
+    .pitem, .vitem {
+        flex-basis: 100%;
+    }
+    .profile_voting_container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        margin-top: 60px;
+        padding-left: 0px;
+    }
+    .you_voted_img{
+        width: 100%;
+        height: 200px;
+        background-position: center;
+        object-fit: cover;
+        border-radius: 10px;
+        object-position:center;
+    }
+
+    .votes_table{
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .profile_voting_container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: -20px;
+    }
+    
+    .table_th_Cell{
+        font-size: 13px;
+        font-weight: bolder;
+        color: white;
+        text-align: center;
+    }
+    
+    .tabel_bd_cell{
+        font-size: 15px;
+        text-align: center;
+    }
+    .table_container_votec{
+        width: 100%;
+    }
+    .voter_profile_card img{
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid white;
+        /* background-image: url("../../images/proile_default_img.png"); */
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        object-position: center;
+    }
+    .pitem {
+        flex: 0 0 35%;
+        padding-bottom: 20px;
+        margin-top: 10px;
+        /* padding: 0px 10px; */
+        /* padding-left: 10px;   */
+        /* padding-right: 10px; */
+        display: flex;
+        justify-content: center;
+    }
+    .voter_profile_card{
+        padding: 30px;
+        width: 340px;
+    }
+    .you_voted_img{
+        height: 150px;
+        background-position:none;
+        background-size:  cover;
+        border-radius: 10px;
+        object-position:center;
+        object-fit: cover;
+    }
+    .candidate_logo,.default_logo{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    
+   
+}
+
