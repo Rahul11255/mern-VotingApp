@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./info.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ReuseCard = ({
   internLink1,
@@ -37,7 +38,7 @@ const ReuseCard = ({
     <section className="info_card">
       <div style={{ borderTop: `${btop1}` }}>
         <a href={`#${internLink1}`}>
-          <img src={`${img1}`} alt="" />
+          <LazyLoadImage className="card-img" effect='blur' src={`${img1}`} alt="" />
         </a>
         <motion.h3 initial="hidden" animate="show" variants={downToupAnimation}>
           {title1}
@@ -46,7 +47,7 @@ const ReuseCard = ({
       </div>
       <div style={{ borderTop: `${btop2}` }}>
         <a href={`#${internLink2}`}>
-          <img src={`${img2}`} alt="" />
+          <LazyLoadImage className="card-img" effect='blur' src={`${img2}`} alt="" />
         </a>
         <motion.h3 initial="hidden" animate="show" variants={downToupAnimation}>
           {title2}
@@ -55,7 +56,7 @@ const ReuseCard = ({
       </div>
       <div style={{ borderTop: `${btop3}` }}>
         <a href={`#${internLink3}`}>
-          <img src={`${img3}`} alt="" />
+          <LazyLoadImage className="card-img" effect='blur' src={`${img3}`} alt="" />
         </a>
         <motion.h3 initial="hidden" animate="show" variants={downToupAnimation}>
           {title3}

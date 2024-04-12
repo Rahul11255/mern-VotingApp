@@ -1,6 +1,8 @@
 import React from "react";
 import "./commision.css";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const Commission = () => {
   return (
@@ -11,8 +13,8 @@ const Commission = () => {
       <div className="c_card_item">
         <div>
           <Link to={`/eci/shri-rajiv-kumar`}>
-            <img
-            loading="lazy"
+            <LazyLoadImage
+            effect='blur'
               className="card_item_img"
               src="https://www.eci.gov.in/newimg/gallery/ec-rk.jpg"
               alt=""
@@ -23,8 +25,8 @@ const Commission = () => {
         </div>
         <div>
           <Link to={`/eci/Shri-Gyanesh-Kumar`}>
-            <img
-            loading="lazy"
+            <LazyLoadImage
+            effect='blur'
               className="card_item_img"
               src="https://www.eci.gov.in/newimg/gallery/EC-Shri-Gyanesh-Kumar.jpg"
               alt=""
@@ -36,8 +38,8 @@ const Commission = () => {
         </div>
         <div>
           <Link to={`/eci/Dr-Sukhbir-Singh-Sandhu`}>
-            <img
-            loading="lazy"
+            <LazyLoadImage
+            effect='blur'
               className="card_item_img"
               src="https://www.eci.gov.in/newimg/gallery/EC-Dr-Sukhbir-Singh-Sandhu.jpg"
               alt=""

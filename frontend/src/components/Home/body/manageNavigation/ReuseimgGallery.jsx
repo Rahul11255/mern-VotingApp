@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid } from '@mui/material';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 const ReuseimgGallery = ({img1,img2, imgmid,img3,img4}) => {
@@ -9,27 +10,27 @@ const ReuseimgGallery = ({img1,img2, imgmid,img3,img4}) => {
     {/* First Grid */}
     <Grid item xs={12} sm={6} md={4}>
       <div>
-        <img loading='lazy' className='grid_img' src={`${img1}`}  alt="" />
+        <LazyLoadImage effect="blur" className='grid_img' src={`${img1}`}  alt="gallery-image" placeholderSrc='' />
       </div>
       <div>
-      <img loading='lazy' className='grid_img' src={`${img2}`}  alt="" />
+      <LazyLoadImage effect="blur" className='grid_img' src={`${img2}`}  alt="gallery-image" />
       </div>
     </Grid>
 
     {/* Second Grid */}
     <Grid item xs={12} sm={6} md={4}>
       <div >
-      <img loading='lazy' className='grid_img' src={`${imgmid}`} alt="" />
+      <LazyLoadImage effect="blur" className='grid_img' src={`${imgmid}`} alt="gallery-image" />
 
       </div>
     </Grid>
     {/* Third Grid */}
     <Grid item xs={12} sm={6} md={4}>
     <div>
-        <img loading='lazy' className='grid_img' src={`${img3}`}  alt="" />
+        <LazyLoadImage effect="blur" className='grid_img' src={`${img3}`}  alt="gallery-image" />
       </div>
       <div>
-      <img loading='lazy' className='grid_img' src={`${img4}`}  alt="" />
+      <LazyLoadImage effect="blur" className='grid_img' src={`${img4}`}  alt="gallery-image" />
       </div>
     </Grid>
   </Grid>

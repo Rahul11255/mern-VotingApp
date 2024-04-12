@@ -15,7 +15,6 @@ import "./landing.css";
 import ashok from "../../images/india-nation-symbol.png";
 import { useNavigate } from "react-router-dom";
 import ImageItem from "./ImageItem";
-
 import { ReactTyped} from "react-typed"
 import Commission from "./Commission";
 import Title from "./Title";
