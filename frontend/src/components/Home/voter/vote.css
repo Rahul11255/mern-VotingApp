@@ -51,18 +51,14 @@
 
 .pitem {
     flex: 0 0 35%;
-    /* padding: 20px 25px; */
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
-    /* width: 100%; */
     
 }
 
 .vitem {
     flex: 0 0 65%;
-    /* display: flex;
-    justify-content: center; */
 }
 
 .voter_profile_card{
@@ -325,7 +321,6 @@
         height: 130px;
         border-radius: 50%;
         border: 3px solid white;
-        /* background-image: url("../../images/proile_default_img.png"); */
         cursor: pointer;
         transition: all 0.5s ease-in-out;
         background-position: center;
@@ -337,9 +332,6 @@
         flex: 0 0 35%;
         padding-bottom: 20px;
         margin-top: 10px;
-        /* padding: 0px 10px; */
-        /* padding-left: 10px;   */
-        /* padding-right: 10px; */
         display: flex;
         justify-content: center;
     }
