@@ -15,6 +15,5 @@ const db = mongoose
 
 module.exports = db;
 
-// rr710505
 // 
 

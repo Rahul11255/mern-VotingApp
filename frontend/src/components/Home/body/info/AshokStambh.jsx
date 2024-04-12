@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../navbar/Navbar";
 import "./info.css";
 import TypingEffect from "./TypingEffect";
 import ReuseCard from "./ReuseCard";
@@ -8,14 +7,10 @@ import {ashokPillarData,theNationalEmblem,dhamekhStupaData,ashokaChakra} from ".
 import Title from "../Title";
 
 const AshokStambh = () => {
-  
-
-  
   return (
     <div className="universalNavbarContainer">
     <Title title={"The Ashok Stambh"} />
 
-      <Navbar />
       <section className="info_hero_img">
         <TypingEffect text={"The Ashok Stambh"} />
         <img

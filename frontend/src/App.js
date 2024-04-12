@@ -13,8 +13,8 @@ import BharatMandapam from './components/Home/body/info/BharatMandapam';
 import AshokStambh from './components/Home/body/info/AshokStambh';
 import Footer from './components/Home/Footer/Footer';
 import CardInfo from './components/Home/body/manageNavigation/CardInfo';
-import ImageUploader from './ImageUploader';
 import ProfilePage from './UserPRofile';
+import Navbar from './components/Home/navbar/Navbar';
 
 
 function App() {
@@ -25,8 +25,15 @@ function App() {
     return !['/signup', '/login','/admin'].includes(location.pathname);
   };
 
+  const shouldShowNavbar = () => {
+    return !['/','/signup', '/login','/admin'].includes(location.pathname);
+  };
+
+
+
   return (
     <div className="App">
+   {shouldShowNavbar() && <div style={{padding:"10px"}}><Navbar /></div>}
      <Routes>
         <Route path="/" element={<Landing/>} />
         <Route path="/signup" element={<Signup />} />

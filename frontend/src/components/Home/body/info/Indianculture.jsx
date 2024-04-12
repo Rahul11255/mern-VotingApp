@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../navbar/Navbar";
 import "./info.css";
 import TypingEffect from "./TypingEffect";
 import ReuseCard from "./ReuseCard";
@@ -11,8 +10,6 @@ const Indianculture = () => {
   return (
     <div className="universalNavbarContainer">
     <Title title={"Indian culture"} />
-
-      <Navbar />
       <section className="info_hero_img">
         <TypingEffect text={"Indian culture"} />
         <img

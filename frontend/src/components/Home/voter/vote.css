@@ -2,8 +2,6 @@
     width: 100%;
     height: auto;
 }
-
-
 .votes_table{
     overflow: hidden;
     width: 100%;
@@ -95,19 +93,9 @@
     transition: all 0.5s ease-in-out;
 }
 
-/* .voter_profile_card img:hover{
-    transform: scale(1.01);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid white;
-} */
-
-
 .profile_details{
     margin-top: 20px;
 }
-
 
 .profile_details_ele{
     color: white;
@@ -137,6 +125,59 @@
     border-radius: 10px;
     object-position:center;
 }
+
+
+.votes_carsoul_container{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: red;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-pagination-bullet {
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: white;
+  }
+  
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #012c31;
+  }
+  
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 1050px) {
@@ -192,6 +233,23 @@
   
 
 @media screen and (max-width: 750px) {
+    .votes_carsoul_container{
+        width: 100%;
+        height: 130px;
+        margin-top: 65px;
+
+    }
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 10px;
+      }
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #012c31;
+      }
+    
     .pitem, .vitem {
         flex-basis: 100%;
     }
@@ -201,7 +259,7 @@
         display: flex;
         flex-wrap: wrap;
         padding-top: 20px;
-        margin-top: 60px;
+        margin-top: 30px;
         padding-left: 0px;
     }
     .you_voted_img{
@@ -214,11 +272,31 @@
     }
 
     .votes_table{
-        margin-top: 80px;
+        margin-top: 5px;
+        padding: 5px;
     }
 }
 
 @media screen and (max-width: 450px) {
+
+    .votes_carsoul_container{
+        width: 100%;
+        height: 80px;
+        margin-top: 65px;
+
+    }
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 10px;
+      }
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #012c31;
+      }
+
+    
 
     .profile_voting_container {
         width: 100%;

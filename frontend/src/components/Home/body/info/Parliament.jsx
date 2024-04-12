@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../navbar/Navbar";
 import "./info.css";
 import TypingEffect from "./TypingEffect";
 import ReuseCard from "./ReuseCard";
@@ -12,7 +11,7 @@ const Parliament = () => {
   return (
     <div className="universalNavbarContainer">
     <Title title={"The Parliament Of India"} />
-      <Navbar />
+  
       <section className="info_hero_img">
         <TypingEffect text="The Parliament of india" />
         <img

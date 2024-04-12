@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../navbar/Navbar";
 import "./info.css";
 import TypingEffect from "./TypingEffect";
 import ReuseCard from "./ReuseCard";
@@ -13,8 +12,6 @@ const RamMandir = () => {
   return (
     <div className="universalNavbarContainer">
     <Title title={"Ram Mandir"} />
-
-      <Navbar />
       <section className="info_hero_img">
         <TypingEffect text={"Ram Mandir"} />
         <img
