@@ -5,10 +5,11 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../navbar/Navbar";
 import EditIcon from "@mui/icons-material/Edit";
-
+import ErrorIcon from '@mui/icons-material/Error';
 import { Button } from "@mui/material";
 import Votenow from "./Votenow";
 import Title from "../body/Title";
+import DataLoading from "../DataLoading";
 
 const Voter = () => {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ const Voter = () => {
       localStorage.setItem("isVoted", response.data.isVoted);
     } catch (error) {
       console.error("Error fetching user data:", error);
-      setError("Failed to fetch user data");
+      setError("Failed to fetch User Data");
     } finally {
       setIsLoading(false);
     }
@@ -84,13 +85,14 @@ const Voter = () => {
     <div style={{ padding: "10px" }} className="votes_container">
       <Title title={username} />
       <Navbar />
+      {isLoading ? (
+            <DataLoading/>
+          ) : error ? (
+            <div className="loadinguser"> <ErrorIcon style={{color:"red"}} sx={{ fontSize: 60 }}/> <h3> Error: {error}</h3></div>
+          ) : (
       <div className="profile_voting_container">
         <div className="pitem">
-          {isLoading ? (
-            <div>Loading...</div>
-          ) : error ? (
-            <div>Error: {error}</div>
-          ) : (
+        
             <div className="voter_profile_card">
               <div className="profile_img">
                 {selectedImage ? (
@@ -168,12 +170,11 @@ const Voter = () => {
                 </p>
               </div>
             </div>
-          )}
         </div>
         <div className="vitem">
           <Votenow userData={userData} fetchUserData={fetchUserData} />
         </div>
-      </div>
+      </div> )}
     </div>
   );
 };

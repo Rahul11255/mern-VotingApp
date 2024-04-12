@@ -51,14 +51,18 @@
 
 .pitem {
     flex: 0 0 35%;
+    /* padding: 20px 25px; */
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
+    /* width: 100%; */
     
 }
 
 .vitem {
     flex: 0 0 65%;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .voter_profile_card{
@@ -151,24 +155,41 @@
   }
 
   .swiper-pagination-bullet {
-    width: 30px;
-    height: 20px;
+    width: 30px !important;
+    height: 20px !important;
     text-align: center;
-    line-height: 20px;
+    line-height:  20px;
     font-size: 12px;
     color: #000;
     opacity: 1;
-    background: white;
+    background: rgb(255, 255, 255) !important;
   }
   
   .swiper-pagination-bullet-active {
     color: #fff;
-    background: #012c31;
+    background: #012c31 !important;
   }
   
 
+.loading{
+    width: 230%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
 
-
+.loadinguser{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
 
 
 
@@ -236,14 +257,14 @@
 
     }
     .swiper-pagination-bullet {
-        width: 20px;
-        height: 15px;
-        line-height: 15px;
-        font-size: 10px;
+        width: 20px !important;
+        height: 15px !important;
+        line-height: 15px !important;
+        font-size: 10px !important;
       }
       .swiper-pagination-bullet-active {
         color: #fff;
-        background: #012c31;
+        background: #012c31 !important;
       }
     
     .pitem, .vitem {
@@ -271,25 +292,34 @@
         margin-top: 5px;
         padding: 5px;
     }
+
+    .pitem {
+       
+        margin-top: 30px;
+        /* padding: 0px 10px; */
+        /* padding-left: 10px;   */
+        /* padding-right: 10px; */
+      
+    }
 }
 
 @media screen and (max-width: 450px) {
 
     .votes_carsoul_container{
         width: 100%;
-        height: 80px;
+        height: 110px;
         margin-top: 65px;
 
     }
     .swiper-pagination-bullet {
-        width: 20px;
-        height: 15px;
-        line-height: 15px;
-        font-size: 10px;
+        width: 20px !important;
+        height: 15px !important;
+        line-height: 15px !important;
+        font-size: 10px !important;
       }
       .swiper-pagination-bullet-active {
         color: #fff;
-        background: #012c31;
+        background: #012c31 !important;
       }
 
     
@@ -321,6 +351,7 @@
         height: 130px;
         border-radius: 50%;
         border: 3px solid white;
+        /* background-image: url("../../images/proile_default_img.png"); */
         cursor: pointer;
         transition: all 0.5s ease-in-out;
         background-position: center;
@@ -330,10 +361,13 @@
     }
     .pitem {
         flex: 0 0 35%;
-        padding-bottom: 20px;
-        margin-top: 10px;
+        padding-bottom: 0px;
+        margin-top: 30px;
+        width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     .voter_profile_card{
         padding: 30px;
@@ -357,7 +391,15 @@
         box-sizing: border-box;
     }
 
+    .loading{
+        margin-top: 20px;
+        width: 280%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
     
    
 }
-
