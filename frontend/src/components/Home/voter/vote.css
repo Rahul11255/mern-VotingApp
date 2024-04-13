@@ -191,8 +191,91 @@
     flex-direction: column;
 }
 
+.party_info_container{
+    width: 100%;
+    height: auto;
+    background-color: #F0F7FB;
+}
+
+.party_hero_text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.party_hero_text::after {
+    margin-top: 10px;
+    content: "";
+    background-image: url("https://www.eci.gov.in/newimg/icons/title-shape.png");
+    width: 65px;
+    height: 15px;
+    display: block;
+    background-repeat: no-repeat;
+  }
 
 
+  .party_card_container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    margin-top: 20px;
+    padding-bottom: 35px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 285px 285px;
+    /* flex-wrap: wrap; */ 
+    gap: 5px;
+  }
+  
+  .p_card_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .p_card_item:nth-child(odd){
+    background-color: #E3EBFE;
+    transition: 0.4s ease-in-out all ;
+  }
+
+  .p_card_item:nth-child(odd) >h3{
+    color: #004274;
+    font-size: 24px;
+  }
+
+  .p_card_item:nth-child(even) >h3{
+    color: #B70482;
+    font-size: 24px;
+  }
+
+  .p_card_item:nth-child(even){
+    background-color: #FDE6F7;
+    transition: 0.4s ease-in-out all ;
+  }
+  
+  .p_card_item >h5{
+    font-size: 17px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    letter-spacing: 2px;
+  }
+  .p_card_item >p{
+    width: 77%;
+    font-size: 17px;
+    color:grey;
+  }
+  
+  .p_card_item:hover{
+    cursor: pointer;
+    background-color: white;
+  }
+  
 
 
 
@@ -250,6 +333,16 @@
   
 
 @media screen and (max-width: 750px) {
+    .party_card_container{
+        width: 100%;
+        height: auto;
+        display: grid;
+        margin-top: 20px;
+        grid-template-columns: auto auto ;
+        grid-template-rows: 285px 285px 285px;
+        /* flex-wrap: wrap; */ 
+        gap: 5px;
+      }
     .votes_carsoul_container{
         width: 100%;
         height: 130px;
@@ -304,6 +397,34 @@
 }
 
 @media screen and (max-width: 450px) {
+    .p_card_item:nth-child(odd) >h3{
+        font-size: 20px;
+      }
+    
+      .p_card_item:nth-child(even) >h3{
+        font-size: 20px;
+      }
+      .p_card_item >h5{
+        font-size: 12px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        letter-spacing: 1px;
+      }
+      .p_card_item >p{
+        width: 77%;
+        font-size: 15px;
+        color:grey;
+      }
+    .party_card_container{
+        width: 100%;
+        height: auto;
+        display: grid;
+        margin-top: 20px;
+        grid-template-columns: auto ;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+        /* flex-wrap: wrap; */ 
+        gap: 5px;
+      }
 
     .votes_carsoul_container{
         width: 100%;

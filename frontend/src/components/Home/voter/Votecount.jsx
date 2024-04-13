@@ -42,13 +42,48 @@ const Votecount = () => {
       setIsLoading(false);
     }
   };
-  const color = ["#ff6347", "#fbceb1", "#99FFFF"];
+  const color = ["#ff6347", "#FFD700", "#99FFFF","#F0E68C"];
   return (
     <div className="votes_container">
       <Title title={"Total vote counts"} />
-      <div className="votes_carsoul_container">
+      <section className="votes_carsoul_container">
        <SwiperCarsoul/>
-      </div>
+      </section>
+      <section className="party_info_container">
+        <div className="party_hero_text"><h1>POLITICAL PARTIES</h1> </div>
+        <div className="party_card_container">
+          <div className="p_card_item">
+             <h3>Bharatiya Janata Party</h3>
+             <h5>BJP</h5>
+             <p>Since 2014, it has been the ruling political party in India under the incumbent Prime Minister Narendra Modi.</p>
+          </div>  
+          <div className="p_card_item">
+             <h3>Congress</h3>
+             <h5>INC</h5>
+             <p>The Indian National Congress (INC), colloquially the Congress Party or simply the Congress, is a political party in India with deep roots in most regions of India. Founded on 28 December 1885,</p>
+          </div>
+          <div className="p_card_item">
+             <h3>Aam Aadmi Party</h3>
+             <h5>AAP</h5>
+             <p>It was founded on 26 November 2012 by Arvind Kejriwal and his then-companions, following the 2011 Indian anti-corruption movement against then Indian government of Indian National Congress.</p>
+          </div>
+          <div className="p_card_item">
+             <h3>None of The Above</h3>
+             <h5>Nota</h5>
+             <p>"None of the above" (NOTA), or none for short, also known as "against all" or a "scratch" vote, .</p>
+          </div>
+          <div className="p_card_item">
+             <h3>Bjp</h3>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatem, maiores at enim</p>
+          </div>
+          <div className="p_card_item">
+             <h3>Bjp</h3>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatem, maiores at enim</p>
+          </div>
+        </div>
+
+      </section>
+      
       <div className="votes_table">
         <div className="table_container_votec">
           <TableContainer>

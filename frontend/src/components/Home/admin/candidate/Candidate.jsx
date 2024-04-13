@@ -217,6 +217,7 @@ const Candidate = () => {
                   <option value="INC">Indian National Congress</option>
                   <option value="BSP">Bahujan Samaj Party</option>
                   <option value="AAP">Aam Aadmi Party</option>
+                  <option value="Nota">None of the above (India)</option>
                 </select>
               </Grid>
               <Grid item xs={12}>
