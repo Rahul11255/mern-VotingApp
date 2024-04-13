@@ -10,6 +10,7 @@ const db = require("./db")
 const auth_route = require("./routes/auth");
 const candidate_route = require("./routes/candidate")
 
+// Port 
 const PORT = process.env.PORT 
 
 // Middleware
@@ -18,7 +19,6 @@ app.use(body_parser.json())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors())
-
 
 app.use(express.static("images"))
 
