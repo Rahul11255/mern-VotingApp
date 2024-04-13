@@ -6,14 +6,11 @@ require("dotenv").config()
 const app = express();
 const db = require("./db")
 
-
 // Controll All routes 
 const auth_route = require("./routes/auth");
 const candidate_route = require("./routes/candidate")
 
 const PORT = process.env.PORT 
-
-console.log(process.env.MONGO_DB_LOCAL_URL);
 
 // Middleware
 app.use(morgan("tiny"));
@@ -24,7 +21,6 @@ app.use(cors())
 
 
 app.use(express.static("images"))
-
 
 app.get("/", (req, res) => {
   res.json({message:"Server in Running"});
