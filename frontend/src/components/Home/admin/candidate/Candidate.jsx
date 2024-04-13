@@ -136,7 +136,7 @@ const Candidate = () => {
         )}
       </Stack>
       {/* Button to open dialog */}
-      <div style={{ width: "100%", marginTop: "-100px" }}>
+      <div style={{ width: "100%", marginTop: "0px" }}>
         <Button
           onClick={handleOpenDialog}
           variant="contained"
@@ -216,6 +216,9 @@ const Candidate = () => {
                   <option value="BJP">Bharatiya Janata Party</option>
                   <option value="INC">Indian National Congress</option>
                   <option value="BSP">Bahujan Samaj Party</option>
+                  <option value="AAP">Aam Aadmi Party</option>
+                  <option value="AITC">All India Trinamool Congress</option>
+                  <option value="CPI">Communist Party of India</option>
                   <option value="AAP">Aam Aadmi Party</option>
                   <option value="Nota">None of the above (India)</option>
                 </select>

@@ -92,7 +92,6 @@ const Voter = () => {
           ) : (
       <div className="profile_voting_container">
         <div className="pitem">
-        
             <div className="voter_profile_card">
               <div className="profile_img">
                 {selectedImage ? (

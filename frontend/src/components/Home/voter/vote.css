@@ -29,8 +29,8 @@
 }
 
 .candidate_logo,.default_logo{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-position: center;
     background-size: cover;
@@ -38,12 +38,22 @@
     box-sizing: border-box;
 }
 
+.candidate_logo_votenow,.default_logo_votenow{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  box-sizing: border-box;
+  object-fit: cover;
+}
 
 /*  asasf */
 
 .profile_voting_container {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     padding-top: 20px;
@@ -51,18 +61,13 @@
 
 .pitem {
     flex: 0 0 35%;
-    /* padding: 20px 25px; */
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
-    /* width: 100%; */
-    
 }
 
 .vitem {
     flex: 0 0 65%;
-    /* display: flex;
-    justify-content: center; */
 }
 
 .voter_profile_card{

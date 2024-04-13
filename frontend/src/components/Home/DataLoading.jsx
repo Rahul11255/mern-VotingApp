@@ -5,7 +5,7 @@ import './voter/vote.css'
 
 const DataLoading = () => {
   return (
-    <div className="loading" ><RotatingLines
+    <div className='loadinguser' ><RotatingLines
   visible={true}
   height="50"
   width="50"

@@ -6,38 +6,38 @@ const CandidateTables = ({candidates, openConfirmation}) => {
   return (
     <TableContainer  sx={{ alignItems: "center" }}>
     <Table>
-      <TableHead sx={{ backgroundColor: "#007FFF" }}>
+      <TableHead sx={{ backgroundColor: "#007FFF" , }}>
         <TableRow>
-          <TableCell>No</TableCell>
-          <TableCell>Logo</TableCell>
-          <TableCell>Party Name</TableCell>
-          <TableCell>Vote-Now</TableCell>
+          <TableCell align='center'  sx={{color:"white",fontWeight:"bolder"}}>S.No</TableCell>
+          <TableCell align='center'  sx={{color:"white",fontWeight:"bolder"}}>Logo</TableCell>
+          <TableCell align='center'  sx={{color:"white",fontWeight:"bolder"}}>Party Name</TableCell>
+          <TableCell align='center'  sx={{color:"white",fontWeight:"bolder"}}>Vote-Now</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         {candidates.map((candidate, index) => (
           <TableRow key={index}>
-            <TableCell>{index + 1}</TableCell>
-            <TableCell>
+            <TableCell align='center' sx={{fontSize:"18px",fontWeight:"bolder"}} >{index + 1}</TableCell>
+            <TableCell align='center'>
               {candidate.images ? (
                 <img
-                loading="lazy"
-                  className="candidate_logo"
+                  loading="lazy"
+                  className="candidate_logo_votenow"
                   src={candidate.images}
                   alt="candidate_logo"
                 />
               ) : (
                 <img
                 loading="lazy"
-                  className="default_logo"
+                  className="default_logo_votenow"
                   src={defaultimg}
                   alt="default_logo"
                 />
               )}
             </TableCell>
-            <TableCell>{candidate.party}</TableCell>
-            <TableCell>
-              <Button onClick={() => openConfirmation(candidate)}>Vote</Button>
+            <TableCell align='center' sx={{fontSize:"18px",fontWeight:"bolder",letterSpacing:"1.5px"}}>{candidate.party}</TableCell>
+            <TableCell align='center'>
+              <Button size='small' variant="contained"   onClick={() => openConfirmation(candidate)}>Vote</Button>
             </TableCell>
           </TableRow>
         ))}

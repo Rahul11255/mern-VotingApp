@@ -42,7 +42,7 @@ const Votecount = () => {
       setIsLoading(false);
     }
   };
-  const color = ["#ff6347", "#FFD700", "#99FFFF","#F0E68C"];
+  const color = ["#ff6347", "#89CFF0", "#99FFFF","#F0E68C",'#90EE90','#FFC0CB'];
   return (
     <div className="votes_container">
       <Title title={"Total vote counts"} />
@@ -68,18 +68,21 @@ const Votecount = () => {
              <p>It was founded on 26 November 2012 by Arvind Kejriwal and his then-companions, following the 2011 Indian anti-corruption movement against then Indian government of Indian National Congress.</p>
           </div>
           <div className="p_card_item">
+             <h3>Bahujan Samaj Party</h3>
+             <h5>BSP</h5>
+             <p>LThe Bahujan Samaj Party is a national level political party in India that was formed to represent Bahujans, referring to Scheduled Castes, Scheduled Tribes, and Other Backward Classes,</p>
+          </div>
+          <div className="p_card_item">
+             <h3>All India Trinamool Congress</h3>
+             <h5>AITC</h5>
+             <p>The All India Trinamool Congress is an Indian political party that is mainly influential in the state of West Bengal.</p>
+          </div>
+          <div className="p_card_item">
              <h3>None of The Above</h3>
              <h5>Nota</h5>
              <p>"None of the above" (NOTA), or none for short, also known as "against all" or a "scratch" vote, .</p>
           </div>
-          <div className="p_card_item">
-             <h3>Bjp</h3>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatem, maiores at enim</p>
-          </div>
-          <div className="p_card_item">
-             <h3>Bjp</h3>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatem, maiores at enim</p>
-          </div>
+         
         </div>
 
       </section>

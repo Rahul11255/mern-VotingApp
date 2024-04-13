@@ -8,7 +8,7 @@
 
 .data {
   width: 100%;
-  margin-top: -150px;
+  margin-top: 0px;
   box-sizing: border-box;
 }
 
@@ -26,6 +26,7 @@
 
 .candiate_input::placeholder {
   font-size: 16px;
+  color: rgb(95, 90, 90);
 }
 .candiate_input:focus {
   border: 2px solid darkcyan;
