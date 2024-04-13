@@ -112,9 +112,9 @@ const Voter = () => {
                   variant="contained"
                   size="small"
                   onClick={handleButtonClick}
-                  startIcon={<EditIcon />}
+                  startIcon={<EditIcon />}  
                 >
-                  Add Your image
+                  Edit Profile Photo
                 </Button>
                 <input
                   id="upload-input"
