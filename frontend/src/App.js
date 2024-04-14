@@ -18,6 +18,7 @@ import Footer from './components/Home/Footer/Footer';
 import CardInfo from './components/Home/body/manageNavigation/CardInfo';
 import ProfilePage from './UserPRofile';
 import Navbar from './components/Home/navbar/Navbar';
+import PagenotFound from './PagenotFound';
 
 function App() {
   const location = useLocation();
@@ -26,15 +27,15 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false); // Setting loading to false after 4 seconds
-    }, 2000);
+    }, 2500);
   }, []);
 
   const shouldShowFooter = () => {
-    return !['/signup', '/login', '/admin'].includes(location.pathname);
+    return !['/signup', '/login', '/admin','/*'].includes(location.pathname);
   };
 
   const shouldShowNavbar = () => {
-    return !['/', '/signup', '/login', '/admin', '/user/profile'].includes(location.pathname);
+    return !['/', '/signup', '/login', '/admin', '/user/profile', "/*"].includes(location.pathname);
   };
 
   return (
@@ -44,7 +45,7 @@ function App() {
         <div className='app-loading'><InfinitySpin
   visible={true}
   width="200"
-  color="#4fa94d"
+  color="white"
   ariaLabel="infinity-spin-loading"
   /></div>
       ) : (
@@ -64,7 +65,7 @@ function App() {
         <Route path="/ashok-stambh" element={<AshokStambh />} />
         <Route path="/eci/:id" element={<CardInfo />} />
         <Route path="/image" element={<ProfilePage />} />
-        <Route path='*' element={<h1>Page not found</h1>} />
+        <Route path='*' element={<PagenotFound/>} />
       </Routes>
       {shouldShowFooter() && <Footer />}</>
     )}
