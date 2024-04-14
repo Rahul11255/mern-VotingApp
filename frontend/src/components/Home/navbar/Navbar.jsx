@@ -64,7 +64,7 @@ const Navbar = () => {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/votes/count">Votes</NavLink>
+          <NavLink to="/votes/count">LiveVotes</NavLink>
         </li>
         {isLoggedIn && localStorage.getItem("role") === "admin" && (
           <li>

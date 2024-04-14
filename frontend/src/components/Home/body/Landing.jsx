@@ -1,3 +1,4 @@
+import HowToVoteIcon from "@mui/icons-material/HowToVote";
 import React, { useEffect, useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
@@ -15,7 +16,7 @@ import "./landing.css";
 import ashok from "../../images/india-nation-symbol.png";
 import { useNavigate } from "react-router-dom";
 import ImageItem from "./ImageItem";
-import { ReactTyped} from "react-typed"
+import { ReactTyped } from "react-typed";
 import Commission from "./Commission";
 import Title from "./Title";
 
@@ -56,7 +57,7 @@ const Landing = () => {
 
   return (
     <div className="first_container">
-    <Title title={""} />
+      <Title title={""} />
 
       <Navbar />
       <div className="second_container">
@@ -119,7 +120,12 @@ const Landing = () => {
               <p>Vote now</p>
             </div>
             <motion.h2 variants={fadeInUpAnimation}>
-             <ReactTyped strings={["The Political Party"]} typeSpeed={100} loop backSpeed={60}  />  
+              <ReactTyped
+                strings={["The Political Party"]}
+                typeSpeed={100}
+                loop
+                backSpeed={60}
+              />
             </motion.h2>
             <motion.h2 variants={fadeInUpAnimation}>
               Vote for the
@@ -140,6 +146,20 @@ const Landing = () => {
             >
               Vote now
             </motion.button>
+            <motion.a href="#livevote" variants={fadeInUpAnimation}>
+              <Button
+              className="l_vote_live"
+                onClick={() => {
+                  naviagte("/votes/count");
+                }}
+                color="secondary"
+                variant="contained"
+                startIcon={<HowToVoteIcon />}
+                endIcon={<HowToVoteIcon />}
+              >
+                Check live Votes
+              </Button>
+            </motion.a>
           </motion.div>
         </div>
       </div>
@@ -172,7 +192,7 @@ const Landing = () => {
           <span style={{ textTransform: "capitalize" }}> {usernamae} </span>
         </Alert>
       </Snackbar>
-      <Commission/>
+      <Commission />
     </div>
   );
 };

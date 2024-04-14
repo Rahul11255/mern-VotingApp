@@ -171,12 +171,17 @@ const Footer = () => {
                   linkedin
                 </li>
               </a>
+              <li style={{listStyle:"none" ,color:"white",marginTop:"10px"}}>
+              <b>Ph - </b> <em>9354081946</em>   
+              </li>
+
             </div>
             <a href="mailto:rr710505@gmail.com?subject=Inquiry%20About%20Your%20Service&body=Hello,%0D%0A%0D%0AI'm reaching out to inquire about your services. Please provide me with more information.%0D%0A%0D%0AThank you.">
               <Button variant="contained" style={{ marginTop: "20px" }}>
                 Contact me
               </Button>
             </a>
+            
           </div>
         </Grid>
       </Grid>

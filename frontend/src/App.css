@@ -28,6 +28,9 @@
     border-bottom: 3px solid rgb(19, 201, 19);
 }
 
+html{
+    scroll-behavior:smooth;
+}
 
 .navbar_menu li .active{
     /* color: red; */

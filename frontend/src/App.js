@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false); // Setting loading to false after 4 seconds
-    }, 100);
+    }, 2000);
   }, []);
 
   const shouldShowFooter = () => {
