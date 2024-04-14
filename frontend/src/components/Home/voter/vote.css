@@ -51,6 +51,15 @@
 
 /*  asasf */
 
+.see_live_votes{
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .profile_voting_container {
     width: 100%;
     height: auto;

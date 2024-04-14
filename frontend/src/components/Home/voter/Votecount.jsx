@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import HowToVoteIcon from '@mui/icons-material/HowToVote';
 import axios from "axios";
 import ErrorIcon from "@mui/icons-material/Error";
 
@@ -50,6 +50,10 @@ const Votecount = () => {
        <SwiperCarsoul/>
       </section>
       <section className="party_info_container">
+      <div className="see_live_votes"> <a href="#livevote"> <Button color="secondary" size="larger" variant="contained"
+      startIcon={<HowToVoteIcon/>}
+      endIcon={<HowToVoteIcon/>}
+      >Check live Votes</Button></a></div>
         <div className="party_hero_text"><h1>POLITICAL PARTIES</h1> </div>
         <div className="party_card_container">
           <div className="p_card_item">
@@ -88,7 +92,7 @@ const Votecount = () => {
       </section>
       
       <div className="votes_table">
-        <div className="table_container_votec">
+        <div className="table_container_votec" id="livevote">
           <TableContainer>
             <Table>
               <TableHead sx={{ backgroundColor: "#007FFF" }}>
