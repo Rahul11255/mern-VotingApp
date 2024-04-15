@@ -163,7 +163,7 @@ const Voter = () => {
                     </Button>
                   )}
                 </p>
-                <p className="profile_details_ele" style={{ fontSize: "20px" }}>
+                <p className="profile_details_ele" style={{ fontSize: "15.5px" ,  }}>
                   <span className="span"> Email-Id : </span>
                   {userData.email}
                 </p>
