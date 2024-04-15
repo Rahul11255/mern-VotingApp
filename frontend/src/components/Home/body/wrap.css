@@ -1,0 +1,152 @@
+.wrap_grid_container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: 155px;
+}
+
+.circle_div {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.arrow_div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.arrow_div p {
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+.circle {
+  width: 45%;
+  height: 100%;
+  border: 10px solid #43aaaa;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-items: center;
+}
+
+.circle img {
+  width: 80%;
+  transition: 0.5s ease-in-out all;
+  cursor: pointer;
+}
+
+.circle img:hover {
+  transform: scale(0.9);
+}
+
+.down_arrow {
+  height: 10px;
+  margin-top: -10px;
+  width: 100%;
+  background-color: #43aaaa;
+}
+.c2 {
+  border: 10px solid #aa229d;
+}
+
+.arrow2 {
+  background-color: #aa229d;
+}
+
+.c3 {
+  border: 10px solid #e23a59;
+}
+
+.arrow3 {
+  background-color: #e23a59;
+}
+
+.c4 {
+  border: 10px solid #28a9e0;
+}
+
+.arrow4 {
+  background-color: #28a9e0;
+}
+.c5 {
+  border: 10px solid #f9a02b;
+}
+
+.arrow5 {
+  background-color: #f9a02b;
+}
+.c6 {
+  border: 10px solid #e06410;
+}
+
+.arrow6 {
+  background-color: #e06410;
+}
+
+@media screen and (max-width: 950px) {
+  .wrap_grid_container {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 155px 155px;
+    row-gap: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .wrap_grid_container {
+    grid-template-columns: auto auto;
+    grid-template-rows: 155px 155px 155px;
+    row-gap: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrap_grid_container {
+    grid-template-columns: auto;
+    grid-template-rows: 210px 210px 210px 210px 210px 210px;
+    row-gap: 18px;
+  }
+  .circle_div {
+    height: 130px;
+  }
+  .arrow_div p {
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    font-size: 20px;
+  }
+  .wrap_grid_item1 {
+    background-color: #abf0f054;
+    padding: 10px 0px;
+  }
+  .wrap_grid_item2 {
+    background-color: #e788de4d;
+    padding: 10px 0px;
+  }
+  .wrap_grid_item3 {
+    background-color: #ee9ead65;
+    padding: 10px 0px;
+  }
+  .wrap_grid_item4 {
+    background-color: #8acfec5e;
+    padding: 10px 0px;
+  }
+  .wrap_grid_item5 {
+    background-color: #f5c78a65;
+    padding: 10px 0px;
+  }
+  .wrap_grid_item6 {
+    background-color: #f1bd9b59;
+    padding: 10px 0px;
+  }
+}

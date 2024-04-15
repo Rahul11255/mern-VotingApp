@@ -67,6 +67,11 @@
     text-align: center;
     background-color: #FFC107;
 }
+
+.download_schedule:hover{
+    background-color: #ffc107ef;
+}
+
 .download_schedule a{
     color: black;
     font-size: 20px;

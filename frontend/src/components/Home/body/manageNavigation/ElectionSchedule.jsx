@@ -42,7 +42,7 @@ const ElectionSchedule = () => {
         </Grid>
       </section>
       <section className='download_schedule'>
-        <a  href={fileDownalod} download> <Button  startIcon={<PictureAsPdfOutlinedIcon/>} sx={{color:"black"}}  endIcon={<FileDownloadIcon/>}>
+        <a  href={fileDownalod} download> <Button  startIcon={<PictureAsPdfOutlinedIcon  />} sx={{color:"black"}}  endIcon={<FileDownloadIcon/>}>
         General Election Schedule
       </Button>  </a>
       </section>

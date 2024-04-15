@@ -20,7 +20,7 @@ import { ReactTyped } from "react-typed";
 import Commission from "./Commission";
 import Title from "./Title";
 import { Link } from "react-router-dom";
-
+import WrapSection from "./WrapSection";
 
 const Landing = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -150,7 +150,7 @@ const Landing = () => {
             </motion.button>
             <motion.a href="#livevote" variants={fadeInUpAnimation}>
               <Button
-              className="l_vote_live"
+                className="l_vote_live"
                 onClick={() => {
                   naviagte("/votes/count");
                 }}
@@ -195,9 +195,12 @@ const Landing = () => {
         </Alert>
       </Snackbar>
       <section className="election_schedule">
-      <Link to={`/eci/election-schedule`}>
-        <h3>Election Schedule</h3>
+        <Link to={`/eci/election-schedule`}>
+          <h3>Election Schedule</h3>
         </Link>
+      </section>
+      <section className="land_wrap_section">
+          <WrapSection/>
       </section>
       <Commission />
     </div>
