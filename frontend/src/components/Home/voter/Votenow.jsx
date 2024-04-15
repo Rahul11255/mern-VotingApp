@@ -9,10 +9,11 @@ import {
   DialogContentText,
   DialogTitle,
 } from "@mui/material";
-import you_voted from "../../images/you-voted.jpg";
 import CandidateTables from "./CandidateTables";
+import { useNavigate } from "react-router-dom";
 
 const Votenow = ({ userData, fetchUserData }) => {
+  const navigate = useNavigate()
   const [candidates, setCandidates] = useState([]);
   const [confirmationOpen, setConfirmationOpen] = useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState(null);
@@ -66,13 +67,9 @@ const Votenow = ({ userData, fetchUserData }) => {
     <>
       {userData && userData.role !== "admin" ? (
         userData.isVoted ? (
-          <img
-            className="you_voted_img"
-            loading="lazy"
-            src="https://goodfaithmedia.org/wp-content/uploads/2018/11/vote-sticker-1080x675.jpg"
-            onError={(event) => (event.target.src = you_voted)}
-            alt="you_voted"
-          />
+          <div className="userisvoted">
+            <h3>You have already voted. <Button onClick={()=>{navigate("/votes/count")}} sx={{color:"#03C03C"}} variant="outlined" color="success"> Check the live count for updates. </Button> </h3>
+          </div>
         ) : (
           <>
             <CandidateTables
@@ -106,7 +103,7 @@ const Votenow = ({ userData, fetchUserData }) => {
           </>
         )
       ) : (
-        userData && <h1>Admin not allowed to vote for any candidates</h1>
+        userData && <div className="userisvoted"> <h1>The admin is not allowed to vote for any candidates</h1><Button onClick={()=>{navigate("/votes/count")}} sx={{color:"#03C03C"}} variant="outlined" color="success"> Check the live count for updates. </Button> </div>
       )}
     </>
   );

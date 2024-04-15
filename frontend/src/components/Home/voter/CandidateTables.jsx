@@ -4,6 +4,7 @@ import defaultimg from "../../images/avtar (2).png";
 
 const CandidateTables = ({candidates, openConfirmation}) => {
   return (
+    <div className='userisvoted'>
     <TableContainer  sx={{ alignItems: "center" }}>
     <Table>
       <TableHead sx={{ backgroundColor: "#007FFF" , }}>
@@ -44,6 +45,7 @@ const CandidateTables = ({candidates, openConfirmation}) => {
       </TableBody>
     </Table>
   </TableContainer>
+  </div>
   )
 }
 

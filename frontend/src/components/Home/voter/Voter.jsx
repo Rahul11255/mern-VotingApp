@@ -1,11 +1,14 @@
 import React, { memo, useEffect, useState } from "react";
-import { IconButton } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
-import { useNavigate } from "react-router-dom";
+
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import Navbar from "../navbar/Navbar";
+import electionsymbol from "../../images/election-symbol.png";
+import profileimg from "../../images/profile_img.png";
+import DangerousIcon from "@mui/icons-material/Dangerous";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import indiannationsymbol from "../../images/india-nation-symbol.png";
 import EditIcon from "@mui/icons-material/Edit";
-import ErrorIcon from '@mui/icons-material/Error';
+import ErrorIcon from "@mui/icons-material/Error";
 import { Button } from "@mui/material";
 import Votenow from "./Votenow";
 import Title from "../body/Title";
@@ -21,7 +24,6 @@ const Voter = () => {
   const [error, setError] = useState(null);
 
   const userid = localStorage.getItem("id");
-
 
   const fetchUserData = async () => {
     const token = localStorage.getItem("token");
@@ -54,7 +56,7 @@ const Voter = () => {
     if (uploadedImage) {
       setSelectedImage(uploadedImage);
     }
-  }, [navigate,userid]);
+  }, [navigate, userid]);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -82,10 +84,10 @@ const Voter = () => {
   };
 
   return (
-    <div style={{ padding: "10px" }} className="votes_container">
+    <div className="user_profile_container">
       <Title title={username} />
-      <Navbar />
-      {isLoading ? (
+
+      {/* {isLoading ? (
             <DataLoading/>
           ) : error ? (
             <div className="loadinguser"> <ErrorIcon style={{color:"red"}} sx={{ fontSize: 60 }}/> <h3> Error: {error}</h3></div>
@@ -173,7 +175,105 @@ const Voter = () => {
         <div className="vitem">
           <Votenow userData={userData} fetchUserData={fetchUserData} />
         </div>
-      </div> )}
+      </div> )} */}
+      <section className="top_header_section">
+        <div className="top_header">
+          <div className="top_header_left">
+            <div className="top_left_img">
+              <Link to={"/"}>
+                <img loading="lazy" src={electionsymbol} alt="election_logo" />
+              </Link>
+            </div>
+            <div
+              className="top_left_details"
+              onClick={() => {
+                navigate("/");
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <p>Government of India</p>
+              <p style={{ fontWeight: "bold", color: "black" }}>
+                Election Commision of India
+              </p>
+            </div>
+          </div>
+          <div className="top_header_right">
+            <div className="top_right_img">
+              <img loading="lazy" src={userData?.image} 
+              onError={(event) => (event.target.src = profileimg)}  
+              alt="election_logo" />
+            </div>
+            <div className="top_left_img">
+              <img
+                style={{
+                  width: "75%",
+                  paddingLeft: "5px",
+                  borderLeft: "1px solid black",
+                }}
+                loading="lazy"
+                src={indiannationsymbol}
+                alt="election_logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="profile_section">
+        <div className="profile_container">
+         {isLoading ? (
+            <DataLoading/>
+          ) : error ? (
+            <div className="loadinguser"> <ErrorIcon style={{color:"red"}} sx={{ fontSize: 60 }}/> <h3> Error: {error}</h3></div>
+          ) : (
+        <>
+          <div className="profile_left">
+            <img src={userData?.image }
+              onError={(event) => (event.target.src = profileimg)}  
+             alt="" />
+            <div>
+              <p>
+                {userData?.fname} {userData?.lname}
+              </p>
+              <p>{userData?.role}</p> <p>ID: {userData?._id}</p>
+            </div>
+          </div>
+          <div className="profile_right">
+            <div className="profile_right_1">
+              <div className="email_id">
+                <p>{userData?.email}</p>
+                <p>Email ID</p>
+              </div>
+              <div className="age">
+                <p>{userData?.age}</p>
+                <p>Age</p>
+              </div>
+              <div className="state">
+                <p>{userData?.state}</p>
+                <p>State</p>
+              </div>
+            </div>
+            <div className="profile_right_2">
+              <p>Vote Status</p>
+              <p style={{ color: userData?.isVoted ? "green" : "red" }}>
+                {userData?.isVoted ? "Yes" : "No"}
+              </p>
+              <div className="vote_status">
+                {userData?.isVoted ? (
+                  <CheckCircleIcon sx={{ fontSize: 100, color: "green" }} />
+                ) : (
+                  <DangerousIcon sx={{ fontSize: 100, color: "red" }} />
+                )}
+              </div>
+            </div>
+          </div>
+          </> )}
+        </div>
+      </section>
+
+      <section className="user_voting_container">
+          <Votenow userData={userData} fetchUserData={fetchUserData} />
+      </section>
     </div>
   );
 };
