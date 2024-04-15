@@ -5,6 +5,7 @@ import DrSukhbirSinghSandhu from './DrSukhbirSinghSandhu';
 import ShriRajivKumar from './ShriRajivKumar';
 import "./cardinfo.css"
 import Title from '../Title';
+import ElectionSchedule from './ElectionSchedule';
 
 const CardInfo = () => {
     const { id } = useParams();
@@ -19,6 +20,7 @@ const CardInfo = () => {
       {id === "Shri-Gyanesh-Kumar" && <ShriGyaneshKumar title={title} />}
       {id === "Dr-Sukhbir-Singh-Sandhu" && <DrSukhbirSinghSandhu  title={title} />}
       {id === "shri-rajiv-kumar" && <ShriRajivKumar  title={title}/>}
+      {id === "election-schedule" && <ElectionSchedule title={title}/>}
 
     </>
   )

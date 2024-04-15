@@ -16,7 +16,7 @@ import slide5 from "../../images/slide-5.jpg";
 import slide6 from "../../images/slide-6.jpg";
 import slide7 from "../../images/slide-7.jpg";
 
-const SwiperCarsoul = () => {
+const SwiperCarsoul = ({img1,img2,img3,img4,img5,img6,img7}) => {
 
     const pagination = {
         clickable: true,
@@ -38,25 +38,25 @@ const SwiperCarsoul = () => {
     className="mySwiper"
   >
     <SwiperSlide>
-      <img loading="lazy" src={slide1} alt="slide-1" />
+      <img loading="lazy" src={img1} alt="slide-1" />
     </SwiperSlide>
     <SwiperSlide>
-      <img loading="lazy" src={slide2} alt="slide-2" />
+      <img loading="lazy" src={img2} alt="slide-2" />
     </SwiperSlide>
     <SwiperSlide>
-      <img loading="lazy" src={slide3} alt="slide-3" />
+      <img loading="lazy" src={img3} alt="slide-3" />
     </SwiperSlide>
     <SwiperSlide>
-      <img loading="lazy" src={slide4} alt="slide-4" />
+      <img loading="lazy" src={img4} alt="slide-4" />
     </SwiperSlide>
     <SwiperSlide>
-      <img loading="lazy" src={slide5} alt="slide-5" />
+      <img loading="lazy" src={img5} alt="slide-5" />
     </SwiperSlide>
     <SwiperSlide>
-      <img loading="lazy" src={slide6} alt="slide-6" />
+      <img loading="lazy" src={img6} alt="slide-6" />
     </SwiperSlide>
     <SwiperSlide>
-      <img loading="lazy" src={slide7} alt="slide-7" />
+      <img loading="lazy" src={img7} alt="slide-7" />
     </SwiperSlide>
   </Swiper>
   )

@@ -19,6 +19,8 @@ import ImageItem from "./ImageItem";
 import { ReactTyped } from "react-typed";
 import Commission from "./Commission";
 import Title from "./Title";
+import { Link } from "react-router-dom";
+
 
 const Landing = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -192,6 +194,11 @@ const Landing = () => {
           <span style={{ textTransform: "capitalize" }}> {usernamae} </span>
         </Alert>
       </Snackbar>
+      <section className="election_schedule">
+      <Link to={`/eci/election-schedule`}>
+        <h3>Election Schedule</h3>
+        </Link>
+      </section>
       <Commission />
     </div>
   );
