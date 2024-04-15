@@ -21,12 +21,12 @@ const ElectionSchedule = () => {
   return (
     <div className='schedule_container'>
       <div className='schedule_banner'>
-        <img src={banner} alt="election-schedule-banner" />
+        <img loading='lazy' src={banner} alt="election-schedule-banner" />
       </div>
       <section className='india_map_area'>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <img className='data_date_banner_img' src={data_date_banner} alt="date-date-banner" />
+            <img loading='lazy' className='data_date_banner_img' src={data_date_banner} alt="date-date-banner" />
           </Grid>
           <Grid item xs={12} md={6}>
           <SwiperCarsoul
@@ -42,7 +42,7 @@ const ElectionSchedule = () => {
         </Grid>
       </section>
       <section className='download_schedule'>
-        <a  href={fileDownalod} download> <Button startIcon={<PictureAsPdfOutlinedIcon/>} sx={{color:"black"}}  endIcon={<FileDownloadIcon/>}>
+        <a  href={fileDownalod} download> <Button  startIcon={<PictureAsPdfOutlinedIcon/>} sx={{color:"black"}}  endIcon={<FileDownloadIcon/>}>
         General Election Schedule
       </Button>  </a>
       </section>
