@@ -201,10 +201,10 @@ const Landing = () => {
           <h3>Election Schedule</h3>
         </Link>
       </section>
+      <Commission />
       <section className="land_wrap_section">
           <WrapSection/>
       </section>
-      <Commission />
     </div>
   );
 };
