@@ -4,7 +4,7 @@ import defaultimg from "../../images/avtar (2).png";
 
 const CandidateTables = ({candidates, openConfirmation}) => {
   return (
-    <div className='userisvoted'>
+    <div className='userisvoted' id='votenow'>
     <TableContainer  sx={{ alignItems: "center" }}>
     <Table>
       <TableHead sx={{ backgroundColor: "#007FFF" , }}>
@@ -38,7 +38,7 @@ const CandidateTables = ({candidates, openConfirmation}) => {
             </TableCell>
             <TableCell align='center' sx={{fontSize:"18px",fontWeight:"bolder",letterSpacing:"1.5px"}}>{candidate.party}</TableCell>
             <TableCell align='center'>
-              <Button size='small' variant="contained"   onClick={() => openConfirmation(candidate)}>Vote</Button>
+              <Button size='large' variant="contained"   onClick={() => openConfirmation(candidate)}>Vote</Button>
             </TableCell>
           </TableRow>
         ))}

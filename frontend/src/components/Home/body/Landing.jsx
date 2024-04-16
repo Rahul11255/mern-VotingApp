@@ -135,6 +135,7 @@ const Landing = () => {
               best <span style={{ color: "#E31837" }}>candidate</span> <br />&
               discover peace
             </motion.h2>
+            <motion.a href="#votenow">
             <motion.button
               variants={fadeInUpAnimation}
               className="btn_vote_now"
@@ -148,6 +149,7 @@ const Landing = () => {
             >
               Vote now
             </motion.button>
+            </motion.a>
             <motion.a href="#livevote" variants={fadeInUpAnimation}>
               <Button
                 className="l_vote_live"

@@ -257,10 +257,12 @@
   width: 50px;
   height: auto;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
+
+
 
 .top_left_img img {
   width: 100%;
@@ -270,7 +272,7 @@
 .top_left_details {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
   padding-left: 5px;
 }
@@ -290,12 +292,59 @@
   border-radius: 50%;
   height: auto;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin-right: 5px;
   text-align: center;
   overflow: hidden;
+  cursor: pointer;
+  /* transition: all 0.3s ease-in-out; Adjust the duration and timing function as needed */
 }
+
+.dropdown {
+  position: absolute;
+  display: none;
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  margin-top: 170px;
+  right: 115px;
+  border-radius: 10px;
+  background-color: rgba(10, 105, 112, 0.897);
+  transition: all 1s ease; /* Adjust the duration and timing function as needed */
+}
+
+.dropdown li{
+  list-style: none;
+  background-color: white;
+  border-radius: 10px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  padding: 10px 35px;
+}
+.dropdown li:nth-child(1){
+  margin-bottom: 10px;
+}
+
+.dropdown li:nth-child(2){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dropdown li:active{
+  background-color: pink;
+  color: white;
+}
+
+.dropdown li:nth-child(2):active{
+  background-color: rgb(240, 71, 65);
+  color: white;
+}
+
+
+
 
 .top_right_img img {
   width: 100%;
@@ -331,11 +380,13 @@
 
 .profile_left img {
   width: 120px;
-  margin-top: -160px;
+  margin-top: -120px;
   height: 120px;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
+  /* border: 1px solid black; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .profile_left div {
@@ -459,6 +510,21 @@
   margin-bottom: 20px;
 }
 
+.profile_icon{
+  width: 40%;
+  display: flex;
+  background-color: #98e4ec52;
+  border-radius: 10px;
+  padding: 3px 0px;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  flex-direction: row !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+
 @media screen and (max-width: 950px) {
   .profile_section {
     width: 100%;
@@ -475,6 +541,11 @@
 
 
 @media screen and (max-width: 750px) {
+
+  .dropdown {
+    right: 60px;
+  }
+
   .top_header_section {
     padding: 0px 10px;
   }
@@ -552,6 +623,14 @@
 
 
 @media screen and (max-width: 450px) {
+  .dropdown li{
+    list-style: none;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 10px 35px;
+  }
 
   .userisvoted {
   display: flex;

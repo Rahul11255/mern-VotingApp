@@ -11,9 +11,10 @@ import {
 } from "@mui/material";
 import CandidateTables from "./CandidateTables";
 import { useNavigate } from "react-router-dom";
+import HowToVoteIcon from "@mui/icons-material/HowToVote";
 
 const Votenow = ({ userData, fetchUserData }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [candidates, setCandidates] = useState([]);
   const [confirmationOpen, setConfirmationOpen] = useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState(null);
@@ -68,10 +69,23 @@ const Votenow = ({ userData, fetchUserData }) => {
       {userData && userData.role !== "admin" ? (
         userData.isVoted ? (
           <div className="userisvoted">
-            <h3>You have already voted. <Button onClick={()=>{navigate("/votes/count")}} sx={{color:"#03C03C"}} variant="outlined" color="success"> Check the live count for updates. </Button> </h3>
+            <h3>
+              You have already voted.
+              <Button
+                color="secondary"
+                variant="contained"
+                startIcon={<HowToVoteIcon />}
+                endIcon={<HowToVoteIcon />}
+                onClick={() => {
+                  navigate("/votes/count");
+                }}
+              >
+                Check the live Vote count for updates.
+              </Button>
+            </h3>
           </div>
         ) : (
-          <>
+          <div id="votenow">
             <CandidateTables
               candidates={candidates}
               openConfirmation={openConfirmation}
@@ -88,8 +102,7 @@ const Votenow = ({ userData, fetchUserData }) => {
               </DialogTitle>
               <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                  Are you sure you want to vote for{" "}
-                  {selectedCandidate && selectedCandidate.party}?
+                  Are you sure you want to vote for {selectedCandidate && selectedCandidate.party}?
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
@@ -100,10 +113,25 @@ const Votenow = ({ userData, fetchUserData }) => {
               </DialogActions>
             </Dialog>
             {voteMessage && <p>{voteMessage}</p>}
-          </>
+          </div>
         )
       ) : (
-        userData && <div className="userisvoted"> <h1>The admin is not allowed to vote for any candidates</h1><Button onClick={()=>{navigate("/votes/count")}} sx={{color:"#03C03C"}} variant="outlined" color="success"> Check the live count for updates. </Button> </div>
+        userData && (
+          <div className="userisvoted">
+            <h1>The admin is not allowed to vote for any candidates</h1>
+            <Button
+              onClick={() => {
+                navigate("/votes/count");
+              }}
+              color="secondary"
+              variant="contained"
+              startIcon={<HowToVoteIcon />}
+              endIcon={<HowToVoteIcon />}
+            >
+              Check the live Vote count for updates.
+            </Button>
+          </div>
+        )
       )}
     </>
   );
