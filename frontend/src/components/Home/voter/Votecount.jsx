@@ -37,7 +37,7 @@ const Votecount = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("/candidate/vote");
+      const response = await axios.get("https://voting-app-api-tn00.onrender.com/candidate/vote");
       setCandidates(response.data.candidates);
       setMaxcount(response.data.candidates[0].voteCount);
       setTotalvote(response.data.totalvoted);

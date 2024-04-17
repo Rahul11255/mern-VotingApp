@@ -56,7 +56,7 @@ function Signup() {
     formDataObj.append("file", formData.file);
 
     try {
-      const response = await axios.post("/signup", formDataObj);
+      const response = await axios.post("https://voting-app-api-tn00.onrender.com/signup", formDataObj);
       console.log("Server Response:", response.data.message);
       setFormData({
         email: "",

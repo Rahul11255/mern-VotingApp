@@ -36,7 +36,7 @@ const Voter = () => {
   const fetchUserData = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await axios.get("/singleUser", {
+      const response = await axios.get("https://voting-app-api-tn00.onrender.com/singleUser", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

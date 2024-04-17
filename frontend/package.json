@@ -2,7 +2,6 @@
   "name": "my-sap",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://voting-app-api-tn00.onrender.com",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
@@ -14,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
     "framer-motion": "^11.0.25",
+    "moment": "^2.30.1",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",

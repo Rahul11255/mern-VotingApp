@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Tooltip } from "@mui/material";
-import Chart from "react-apexcharts"
-
+import Chart from "react-apexcharts";
+import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import "./dashboard.css";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import BoyIcon from "@mui/icons-material/Boy";
 import WomanIcon from "@mui/icons-material/Woman";
 import HowToVoteIcon from "@mui/icons-material/HowToVote";
+import moment from "moment";
 import axios from "axios";
 import {
   TableContainer,
@@ -37,7 +38,9 @@ const Dashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("/users");
+      const response = await axios.get(
+        "https://voting-app-api-tn00.onrender.com/users"
+      );
       const userData = response.data;
       setData({
         totalUser: userData.isLength,
@@ -76,41 +79,45 @@ const Dashboard = () => {
         <div className="ds_card_item">
           <HowToVoteIcon sx={{ fontSize: 40, color: "lightgreen" }} />
           <p>
-            {data.votedUsers} 
-             {/* {data.totalUser} */}
+            {data.votedUsers}
+            {/* {data.totalUser} */}
           </p>
           <p>Voted users</p>
         </div>
       </div>
       <div className="charts">
-             <div>
-                <Chart
-                 type="pie"
-                 width={"100%"}
-                 height={450}
-                 series={[data.totalUser,data.maleUser,data.femaleUser,data.votedUsers]}  
-                 options={{
-                  title:{text:"Users PieChart"},
-                  noData:{text:"Empty data"},
-                  labels:["Users","Male","Female","Voted users"],
-                  colors:["#FF7F50","#B0E0E6","#FBCEB1","lightgreen"]
-
-                 }}
-                >
-                
-                </Chart>
-             </div>
+        <div>
+          <Chart
+            type="pie"
+            width={"100%"}
+            height={450}
+            series={[
+              data.totalUser,
+              data.maleUser,
+              data.femaleUser,
+              data.votedUsers,
+            ]}
+            options={{
+              title: { text: "Users PieChart" },
+              noData: { text: "Empty data" },
+              labels: ["Users", "Male", "Female", "Voted users"],
+              colors: ["#FF7F50", "#B0E0E6", "#FBCEB1", "lightgreen"],
+            }}
+          ></Chart>
+        </div>
       </div>
       <div className="userList">
         <TableContainer>
           <Table>
             <TableHead style={{ backgroundColor: "#00A86B", color: "white" }}>
-              <TableRow >
+              <TableRow>
                 <TableCell className="ds_tc">S.no</TableCell>
                 <TableCell className="ds_tc">Name</TableCell>
                 <TableCell className="ds_tc">Email</TableCell>
-                <TableCell className="ds_tc" style={{cursor:"pointer"}}>
-                <Tooltip title="Search user by State" placement="top" >State</Tooltip>  
+                <TableCell className="ds_tc" style={{ cursor: "pointer" }}>
+                  <Tooltip title="Search user by State" placement="top">
+                    State
+                  </Tooltip>
                   <TextField
                     style={{ width: "40px", height: "20px" }}
                     variant="standard"
@@ -125,12 +132,28 @@ const Dashboard = () => {
               {filteredUsers.map((user, index) => (
                 <TableRow key={index}>
                   <TableCell className="ds_tc_data">{index + 1}</TableCell>
-                  <TableCell className="ds_tc_data" style={{ textTransform: "capitalize" }}>
+                  <TableCell
+                    className="ds_tc_data"
+                    style={{ textTransform: "capitalize" }}
+                  >
                     {user.fname} {user.lname}
                   </TableCell>
-                  <TableCell className="ds_tc_data">{user.email}</TableCell>
+                  <TableCell className="ds_tc_data">{user.email}
+                   <p 
+                    style={{color:"grey",fontSize:"15px",fontWeight:400, display:"flex",justifyContent:"center"}}
+                   ><AccessTimeFilledIcon sx={{fontSize:16,marginRight:"5px"}}/>  {moment(user.updatedAt).format("MMMM Do YYYY, h:mm:ss a")}</p> 
+                   </TableCell>
                   <TableCell className="ds_tc_data">{user.state}</TableCell>
-                  <TableCell className="ds_tc_data" style={{backgroundColor:user.isVoted ? "":"#FA8072",textAlign: "center",color: user.isVoted ? "" : "white",}}>{user.isVoted ? "Yes" : "No"}</TableCell>
+                  <TableCell
+                    className="ds_tc_data"
+                    style={{
+                      backgroundColor: user.isVoted ? "" : "#FA8072",
+                      textAlign: "center",
+                      color: user.isVoted ? "" : "white",
+                    }}
+                  >
+                    {user.isVoted ? "Yes" : "No"}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>

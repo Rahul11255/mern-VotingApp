@@ -33,7 +33,7 @@ const Candidate = () => {
   // fetching candidate data
   const fetchCandidates = async () => {
     try {
-      const response = await axios.get("/candidates");
+      const response = await axios.get("https://voting-app-api-tn00.onrender.com/candidates");
       setCandidates(response.data);
     } catch (err) {
       console.error("Error fetching candidates:", err);
@@ -72,7 +72,7 @@ const Candidate = () => {
       );
       if (deleteConfirmed) {
         await axios
-          .delete(`/candidates/${path}`, {
+          .delete(`https://voting-app-api-tn00.onrender.com/candidates/${path}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -103,7 +103,7 @@ const Candidate = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.post("/candidate", formData, {
+      const response = await axios.post("https://voting-app-api-tn00.onrender.com/candidate", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
