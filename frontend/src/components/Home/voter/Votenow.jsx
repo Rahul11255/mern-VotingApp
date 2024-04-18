@@ -102,7 +102,7 @@ const Votenow = ({ userData, fetchUserData }) => {
               </DialogTitle>
               <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                  Are you sure you want to vote for {selectedCandidate && selectedCandidate.party}?
+                  Are you sure you want to vote for {selectedCandidate?.name} from the {selectedCandidate?.party} party ?
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
