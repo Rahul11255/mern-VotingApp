@@ -12,6 +12,7 @@ import {
 import CandidateTables from "./CandidateTables";
 import { useNavigate } from "react-router-dom";
 import HowToVoteIcon from "@mui/icons-material/HowToVote";
+import LoadingButton from '@mui/lab/LoadingButton';
 
 const Votenow = ({ userData, fetchUserData }) => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Votenow = ({ userData, fetchUserData }) => {
   const [confirmationOpen, setConfirmationOpen] = useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState(null);
   const [voteMessage, setVoteMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const openConfirmation = (candidate) => {
     setSelectedCandidate(candidate);
@@ -32,6 +34,7 @@ const Votenow = ({ userData, fetchUserData }) => {
 
   const voteForCandidate = async () => {
     const token = localStorage.getItem("token");
+    setLoading(true);
     try {
       const response = await axios.get(`https://voting-app-api-tn00.onrender.com/vote/${selectedCandidate._id}`, {
         headers: {
@@ -46,6 +49,8 @@ const Votenow = ({ userData, fetchUserData }) => {
       }, 5000);
     } catch (error) {
       console.error("Error voting:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -107,9 +112,13 @@ const Votenow = ({ userData, fetchUserData }) => {
               </DialogContent>
               <DialogActions>
                 <Button onClick={closeConfirmation}>Cancel</Button>
-                <Button onClick={voteForCandidate} autoFocus>
+                <LoadingButton
+                  onClick={voteForCandidate}
+                  loading={loading}
+                  autoFocus
+                >
                   Vote
-                </Button>
+                </LoadingButton>
               </DialogActions>
             </Dialog>
             {voteMessage && <p>{voteMessage}</p>}
