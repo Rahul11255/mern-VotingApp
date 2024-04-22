@@ -1,7 +1,8 @@
 Pictorial view of my projects
 ###
 
-![image](https://github.com/Rahul11255/mern-VotingApp/assets/89196318/3bace546-62cf-4104-8cbe-fbaa6bc7b11d)
+![image](https://github.com/Rahul11255/mern-VotingApp/assets/89196318/8720ee30-2e72-4030-b87c-bfe3439bdf0e)
+
 
 ###
 
